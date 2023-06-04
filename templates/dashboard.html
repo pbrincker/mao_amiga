@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Mão Amiga</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <style>
+    .custom-card {
+      min-height: 200px;
+      background-color: #007bff;
+      color: #fff;
+    }
+    .custom-card-title {
+      font-size: 26px;
+      font-weight: bold;
+    }
+    .custom-card-text {
+      font-size: 64px;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container">
+            <a class="navbar-brand" href="#">Plataforma de Necessidades</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="/">Necessidades Atuais</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="cadastro">Cadastrar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="add_item">Adicionar item</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="dashboard">Dashboard</a>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+    </header>
+    <div class="container mt-4">
+        <h2 class="text-center">Dashboard</h2>
+        <div class="row mt-4">
+          <div class="col-md-4">
+            <div class="card custom-card text-center">
+              <div class="card-body">
+                <h5 class="card-title custom-card-title">Quantidade de Padrinhos</h5>
+                <p class="card-text custom-card-text">73</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card custom-card text-center">
+              <div class="card-body">
+                <h5 class="card-title custom-card-title">Quantidade de Doações</h5>
+                <p class="card-text custom-card-text">2089</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card custom-card text-center">
+              <div class="card-body">
+                <h5 class="card-title custom-card-title">Quantidade de Famílias Atendidas</h5>
+                <p class="card-text custom-card-text">29</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h4 class="mt-5">Lista de Padrinhos:</h4>
+        <ul class="custom-list">
+          <li class="custom-list-item"><span class="donor-name">Padrinho número 01</li>
+          <li class="custom-list-item"><span class="donor-name">Padrinho número 02</li>
+          <li class="custom-list-item"><span class="donor-name">Padrinho número 03</li>
+          <li class="custom-list-item"><span class="donor-name">Padrinho número 04</li>
+        </ul>
+      </div>  
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -3,16 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resumo do Cadastro - Mão Amiga</title>
+  <title>Cadastrar Produto - Mão Amiga</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <style>
-    .summary-container {
-      max-width: 400px;
+    .custom-form {
+      max-width: 700px;
       margin: 0 auto;
-      padding: 20px;
-      background-color: #f8f9fa;
-      border: 1px solid #ddd;
-      border-radius: 5px;
     }
   </style>
 </head>
@@ -44,28 +40,28 @@
         </nav>
     </header>
   <div class="container mt-4">
-    <div class="summary-container">
-      <h2>Resumo do Cadastro</h2>
-      <p><strong>Nome:</strong> {{ nome }}</p>
-      <p><strong>Email:</strong> {{ email }}</p>
-      <p><strong>Telefone:</strong> {{ telefone }}</p>
-      <p><strong>Tipo:</strong> {{ tipo }}</p>
-      <p><strong>CPF/CNPJ:</strong> {{ cpf_cnpj }}</p>
-      <h4>Itens para Doação</h4>
-      <ul>
-        {% for item in itens %}
-          <li>{{ item }}</li>
-        {% endfor %}
-      </ul>
-    </div>
-    <br><br>
-    <h4>Localização</h4>
-      <p><strong>Endereço:</strong> 123 Rua Exemplo, Cidade, Estado</p>
-      <p><strong>Telefone:</strong> (123) 456-7890</p>
-
-      <div class="map-container">
-       <img src="../static/mapa.png" alt="mapa">
+    <h2>Cadastrar Produto</h2>
+    <form class="custom-form" method="post">
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome do Produto</label>
+        <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o nome do produto" required>
       </div>
+      <div class="mb-3">
+        <label for="descricao" class="form-label">Descrição</label>
+        <textarea class="form-control" id="descricao" name="descricao" placeholder="Digite uma descrição do produto" required></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="imagem" class="form-label">Imagem do Produto</label>
+        <input type="file" class="form-control" id="imagem" name="imagem" accept="image/*" required>
+      </div>
+      <div class="mb-3">
+        <label for="quantidade" class="form-label">Quantidade</label>
+        <input type="number" class="form-control" id="quantidade" name="quantidade" placeholder="Digite a quantidade" required>
+      </div>
+      <input type="submit" class="btn btn-primary" value="Cadastrar">
+    </form>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

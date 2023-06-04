@@ -30,6 +30,13 @@ def resumo():
     print(request.form)
     return render_template('cadastro_resumo.html', nome=nome, email=email, telefone=telefone, tipo=tipo, cpf_cnpj=cpf_cnpj, itens=itens)
 
+@app.route('/add_item', methods=['get'])
+def add_item():
+    return render_template("add_item.html")
+
+@app.route('/dashboard', methods=['get'])
+def dashboard():
+    return render_template("dashboard.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
