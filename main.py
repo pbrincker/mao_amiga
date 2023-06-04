@@ -30,9 +30,14 @@ def resumo():
     print(request.form)
     return render_template('cadastro_resumo.html', nome=nome, email=email, telefone=telefone, tipo=tipo, cpf_cnpj=cpf_cnpj, itens=itens)
 
-@app.route('/add_item', methods=['get'])
+@app.route('/add_item', methods=['get', 'post'])
 def add_item():
-    return render_template("add_item.html")
+    if request.method == "POST":
+        return ('''
+        <h5>Item adicionado!</h5>
+        ''')
+    else:
+        return render_template("add_item.html")
 
 @app.route('/dashboard', methods=['get'])
 def dashboard():
