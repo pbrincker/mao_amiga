@@ -15,30 +15,30 @@
 <body>
   <div class="container mt-4">
     <h2>Cadastro</h2>
-    <form class="custom-form">
+    <form class="custom-form" action="resumo" method="post">
       <div class="mb-3">
         <label for="nome" class="form-label">Nome</label>
-        <input type="text" class="form-control" id="nome" placeholder="Digite o nome" required>
+        <input type="text" class="form-control" name='nome' id="nome" placeholder="Digite o nome" required>
       </div>
       <div class="mb-3">
         <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" id="email" placeholder="Digite o email" required>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Digite o email" required>
       </div>
       <div class="mb-3">
         <label for="telefone" class="form-label">Telefone</label>
-        <input type="tel" class="form-control" id="telefone" placeholder="Digite o telefone" pattern="[0-9]{10,}" required>
+        <input type="tel" class="form-control" name="telefone" id="telefone" placeholder="Digite o telefone" pattern="[0-9]{10,}" required>
         <small>Informe apenas os números (mínimo de 10 dígitos)</small>
       </div>
       <div class="mb-3">
         <label for="tipo" class="form-label">Tipo</label>
-        <select class="form-select" id="tipo">
+        <select class="form-select" id="tipo" name="tipo">
           <option value="pf">Pessoa Física</option>
           <option value="pj">Pessoa Jurídica</option>
         </select>
       </div>
       <div class="mb-3">
         <label for="cpf-cnpj" class="form-label">CPF/CNPJ</label>
-        <input type="text" class="form-control" id="cpf-cnpj" placeholder="Digite o CPF ou CNPJ" required>
+        <input type="text" class="form-control" id="cpf-cnpj" name="cpf-cnpj" placeholder="Digite o CPF ou CNPJ" required>
       </div>
     <div class="mb-3">
       <label class="form-label">Itens para doação</label>
@@ -191,7 +191,7 @@
         </div>
       </div>
     </div>
-      <button type="submit" class="btn btn-primary">Enviar cadastro</button>
+    <input type="submit" class="btn btn-primary" value="Enviar">
     </form>
   </div>
 

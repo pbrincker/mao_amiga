@@ -12,14 +12,14 @@ def index():
 def pagamento():
     return render_template('cadastro.html')
 
-@app.route('/resumo', methods=['GET'])
+@app.route('/resumo', methods=['POST'])
 def resumo():
     # nome = "Paulo Henrique Brincker"
     # email = "paulobrincker@gmail.com"
     # telefone = "(65) 99271-7666"
     # tipo = 'Pessoa Física'
     # cpf_cnpj = '024.648.321-03'
-    # itens = ['item1']
+    # itens = ['item1', 'item2']
     
     nome = request.form.get('nome')
     email = request.form.get('email')
@@ -27,7 +27,7 @@ def resumo():
     tipo = request.form.get('tipo')
     cpf_cnpj = request.form.get('cpf-cnpj')
     itens = request.form.getlist('itens')
-
+    print(request.form)
     return render_template('cadastro_resumo.html', nome=nome, email=email, telefone=telefone, tipo=tipo, cpf_cnpj=cpf_cnpj, itens=itens)
 
 
