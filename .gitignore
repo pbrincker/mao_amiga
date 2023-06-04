@@ -1,0 +1,9 @@
+# Ignorar arquivos temporários
+*.tmp
+
+# Ignorar diretório de dependências
+/venv
+
+# Ignorar arquivos de configuração sensíveis
+config.ini
+secrets.txt
